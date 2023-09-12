@@ -1,0 +1,322 @@
+/* Tablet */
+@media (min-width: 768px) and (max-width:1199px){
+
+  #wrap{max-width: 100%;}
+
+  #pcheader{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+  #pcheader .topMenu{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    max-width: 100vw;
+  }
+  #pcheader .logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  #pcheader img{height: 30px;}
+
+  .pc-gnb{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    opacity: 1;
+    padding: 0 10px;
+  }
+  .pc-gnb a{
+    font-size: 16px;
+    font-size: 1rem;
+    padding-bottom: 5px;
+  }
+
+  .visual-inner{max-width: 100%;}
+  main img{width: 100%;}
+  .visualText{
+    width: 100%;
+    max-width: 100%;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h1 span{
+    font-size: 60px;
+    font-size: 3.75rem;
+  }
+
+
+  .section1{display: none;}
+  .section2{width: 100%;}
+  .section2 .text{width: 90%;}
+  .section2 .image01{width: 26.5%;}
+  .section2 .image01:hover{width: 95%;}
+
+  .title{
+    max-width: 100%;
+    font-size: 40px;
+    font-size: 3.125rem;
+    padding: 15px;
+  }
+  .SquareSec span{top: 10%;}
+  .section5 span,.section6 span{top: 60%;}
+
+  .desc h2{font-size: 22px; font-size: 1.375rem;}
+  .desc p{font-size: 14px; font-size: 0.875rem;}
+  .desc span{
+    width: 80%;
+    height: 55%;
+    border-color: rgba(0,0,0,0.1);
+  }
+  .desc .btn{
+    width: 30%;
+    font-weight: 500;
+    padding: 0.4em 1em;
+  }
+
+  .section7{
+    max-width: 100%;
+    height: 50%;
+  }
+  .section8{
+    width: 50%;
+    max-width: 100%;
+  }
+
+  .section8 img, .section9 img, .section12 img{
+    object-fit:contain;
+    /* transform: rotate(90deg); */
+  }
+
+  .last-section{max-width: 100%;}
+  .radiusSection{
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+  .radiusSection:hover{border-radius: 100%;}
+
+  .foot-inner{
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 767px){
+  #pcheader{max-width: 100%;}
+
+  #pcheader .topMenu{max-width: 100vw;}
+  #pcheader .logo{
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
+    float: right;
+  }
+  #pcheader img{height: 28px;}
+  .pc-gnb{display: none;}
+
+  /* 모바일 메뉴바 --------------------------------------- */
+  #moheader{
+    display: block;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    background: rgba(255,255,255,0.8);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.35s;
+  }
+
+  #moheader.active{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .modal-gnb{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .modal-gnb .gnb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .modalLogo{
+    width: 50%;
+    transform: translateX(50%);
+  }
+  .modalLogo img{width: 100%;}
+  .modal-gnb .gnb a{
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: 600;
+    padding: 18px;
+    text-transform: uppercase;
+  }
+
+  .btn-close{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: crimson;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+  }
+
+
+  .visual-inner{max-width: 100%;}
+  main img{width: 100%;}
+  .visualText{
+    width: 100%;
+    max-width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h1 span{font-size: 30px; font-size: 1.875rem;}
+
+  #scroll_btn ul{display: none;}
+
+  #first-section{
+    max-width: 100%;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .section1{
+    width: 100%;
+    max-width: 100%;
+    transform: skew(0);
+  }
+  .section1:hover{transform: translateY(0);}
+  .section1:hover video{
+    width: 100%;
+    box-shadow: none;
+  }
+  .section1 video{
+    width: 100%;
+    height: auto;
+  }
+
+  .section2{
+    width: 100%;
+  }
+  .section2 h2{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 35px;
+    font-size: 2.188rem;
+  }
+  .section2 .text{
+    width: 95%;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .section2 .image01{
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    transform: scale(0.5);
+  }
+  .section2 .image01:hover{transform: scale(1);}
+
+
+  #middle-section{margin: 130px auto;}
+  .SquareSec{
+    width: 100%;
+    margin: auto;
+  }
+  .SquareSec span{top: 20%;}
+  .section3 span{top: 45%;}
+
+  .title{
+    max-width: 100%;
+    position: relative;
+    top: 80px;
+    left: 0;
+    font-size: 35px;
+    font-size: 2.188rem;
+    border: none;
+    backdrop-filter: none;
+    background: none;
+    -webkit-text-fill-color: #222;
+  }
+
+
+  .desc h2{font-size: 22px; font-size: 1.375rem;}
+  .desc p{font-size: 14px; font-size: 0.875rem;}
+  .desc span{
+    width: 80%;
+    height: 55%;
+    border-color: rgba(0,0,0,0.1);
+  }
+  .desc .btn{
+    width: 30%;
+    font-weight: 500;
+    padding: 0.4em 1em;
+  }
+
+  .last-section{
+    margin: 50px auto;
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .last-section.reverseS{flex-direction: column-reverse;}
+  .radiusSection{
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+  .section7,.section8,.section9,.section10,.section11,.section12{width: 100%;}
+  .section8 img, .section9 img, .section12 img{height: auto;}
+
+  .desc span{
+    width: 50%;
+    height: 80%;
+    border-color: rgba(0,0,0,0.1);
+  }
+  footer{
+    height: auto;
+    background-image: linear-gradient(to bottom, #fbc2eb 0%, #a6c1ee 50%);
+  }
+  .foot-inner{
+    width: 100%;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .foot-inner img{height: 30px;}
+  .foot-inner span{
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+}
