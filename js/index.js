@@ -15,7 +15,7 @@ $(document).ready(function(){
       $("#pcheader .topMenu").fadeOut();
     };
 
-    if(scrollpos >= 1800 && scrollpos < 2700){
+    if(scrollpos >= 1700 && scrollpos < 2700){
       $("#pcheader .topMenu").addClass("active");
     }else{
       $("#pcheader .topMenu").removeClass("active");

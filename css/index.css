@@ -2,14 +2,14 @@
 @import url('https://fonts.cdnfonts.com/css/rocket-pop');
 @import url('https://fonts.cdnfonts.com/css/braunschweig');
 @import url('https://fonts.cdnfonts.com/css/rl-madena');
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bungee');
 
 html{scroll-behavior: smooth;}
 *{box-sizing: border-box;}
 a,span{display: block;}
 body{color: #222;}
 /* side buttom */
-#txt1{position:fixed;top:10px;right:10px;}
+#txt1{position:fixed;top:10px;right:10px;z-index: 100000;}
 
 .top_btn{
 	position:fixed;
@@ -164,7 +164,6 @@ body{color: #222;}
 /* Main */
 main{
   width: 100%;
-  /* max-width: 1200px; */
   height: 100%;
   margin: auto;
   position: relative;
@@ -178,61 +177,72 @@ main{
   margin: auto;
 }
 
+:root {
+  --color-primary: #d4e2ff;
+  --color-secondary: #959CFA;
+  --color-tertiary: #7D91E3;
+  --color-quaternary: #A18AFB;
+  --color-quinary: #847DE3;
+}
 .visualText{
-  position: absolute;
-  top: 20%;
-  right: 0;
   display: flex;
+  align-content: center;
   justify-content: center;
-  align-items: center;
-}
-h1 {height: 100px;}
-
-h1 span {
-  position: relative;
-  top: 20px;
-  display: inline-block;
-  animation: bounce .3s ease infinite alternate;
-  font-family: 'Titan One', cursive;
-  font-size: 80px;
-  font-size: 5rem;
-  color: #FFF;
-  text-shadow: 0 1px 0 #CCC,
-                0 2px 0 #CCC,
-                0 3px 0 #CCC,
-                0 4px 0 #CCC,
-                0 5px 0 #CCC,
-                0 6px 0 transparent,
-                0 7px 0 transparent,
-                0 8px 0 transparent,
-                0 9px 0 transparent,
-                0 10px 10px rgba(0, 0, 0, .4);
+  position: absolute;
+  top: 10%;
+  right: 0;
 }
 
-h1 span:nth-child(2) { animation-delay: .1s; }
-h1 span:nth-child(3) { animation-delay: .2s; }
-h1 span:nth-child(4) { animation-delay: .3s; }
-h1 span:nth-child(5) { animation-delay: .4s; }
-h1 span:nth-child(6) { animation-delay: .5s; }
-h1 span:nth-child(7) { animation-delay: .6s; }
-h1 span:nth-child(8) { animation-delay: .7s; }
+.text_shadows{
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
 
-@keyframes bounce {
-  100% {
-    top: -20px;
-    text-shadow: 0 1px 0 #CCC,
-                  0 2px 0 #CCC,
-                  0 3px 0 #CCC,
-                  0 4px 0 #CCC,
-                  0 5px 0 #CCC,
-                  0 6px 0 #CCC,
-                  0 7px 0 #CCC,
-                  0 8px 0 #CCC,
-                  0 9px 0 #CCC,
-                  0 50px 25px rgba(0, 0, 0, .2);
+@keyframes shadows {
+  0% {text-shadow: none;}
+  10% {text-shadow: 3px 3px 0 var(--color-secondary);}
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
   }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {text-shadow: none;}
 }
-
+@keyframes move {
+  0% {transform: translate(0px, 0px);}
+  40% {transform: translate(-12px, -12px);}
+  50% {transform: translate(-12px, -12px);}
+  60% {transform: translate(-12px, -12px);}
+  100% {transform: translate(0px, 0px);}
+}
 
 /* Section */
 section{
@@ -410,6 +420,7 @@ h2{
 }
 
 
+
 .desc{
   width: 100%;
   max-width: 1200px;
@@ -477,6 +488,19 @@ h2{
 .desc span:nth-child(2){animation: circle 4s linear infinite reverse;}
 .desc span:nth-child(3){animation: circle 10s linear infinite;}
 
+#lastS-All{
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+#lastS-All h2{font-weight: bold;}
+#lastS-All>h2{
+  font-family: 'Rocket Pop Bevel', sans-serif;
+  margin: 20px 0;
+  font-size: 50px;
+  font-size: 3.125rem;
+  font-weight: normal;
+}
 
 .last-section{
   display: flex;
