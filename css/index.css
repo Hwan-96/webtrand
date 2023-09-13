@@ -171,6 +171,8 @@ main{
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
+.visualImg2,.visualImg3{display: none;}
+
 .visual-inner{
   width: 1200px;
   position: relative;

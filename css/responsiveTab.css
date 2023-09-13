@@ -49,6 +49,12 @@
     font-size: 3.75rem;
   }
 
+  .visualImg1,.visualImg2{display: none;}
+  .visualImg3{
+    display: block;
+    padding-top: 150px;
+  }
+
 
   .section1{display: none;}
   .section2{width: 100%;}

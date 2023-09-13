@@ -99,6 +99,9 @@
     line-height: 2.2rem;
   }
 
+  .visualImg1,.visualImg3{display: none;}
+  .visualImg2{display: block;}
+
   #first-section{
     max-width: 100%;
     flex-direction: column;
